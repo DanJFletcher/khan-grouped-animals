@@ -21,6 +21,14 @@ staticTest($._("Group the selectors"), function() {
         if ((cssMatches(missingHover1P) || cssMatches(missingHover2P))) {
             result = fail($._("Remember: when you're grouping selectors with ':hover', make sure that you put ':hover' after each selector that you group."));
         }
+        
+        else if (cssMatches(groupedNormalM)) {
+            result = fail($._("Nice! Now just add a selector to the rule with the `:hover` pseudo selector."))
+        }
+        
+        else if (cssMatches(groupedHoverM)) {
+            result = fail($._("Nice! Now just add a selector to the rule *without* the `:hover` pseudo selector."))
+        }
     }
     assertMatch(result, descrip, displayP);
 });
