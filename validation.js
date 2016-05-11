@@ -14,9 +14,11 @@ staticTest($._("Group the selectors"), function() {
     
     var groupedNormalM = anyPass(cssMatch(groupedNormalP), cssMatch(groupedNormal2P));
     var groupedHoverM  = anyPass(cssMatch(groupedHoverP), cssMatch(groupedHover2P));
+    
     result = allPass(groupedNormalM, groupedHoverM);
+    
     if (fails(result)) {
-        if (passes(groupedNormalM) && (cssMatch(missingHover1P) || cssMatch(missingHover2P))) {
+        if ((cssMatches(missingHover1P) || cssMatches(missingHover2P))) {
             result = fail($._("Remember: when you're grouping selectors with ':hover', make sure that you put ':hover' after each selector that you group."));
         }
     }
