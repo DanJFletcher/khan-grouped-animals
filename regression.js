@@ -1,4 +1,13 @@
-[{
+[
+
+
+
+{   // this test makes sure a message isn't being shown here.
+    code: "<style> h1, h2 { font-family: cursive; border-bottom: 1px solid red; padding: 3px; }  h1:hover { background-color: orange }</style>",
+    steps: ["fail"]
+},
+    
+{
     code: "<style> h1, h2 { font-family: cursive; border-bottom: 1px solid red; padding: 3px; }  h1, h2:hover { background-color: orange }</style>",
     steps: ["Remember: when you're grouping selectors with ':hover', make sure that you put ':hover' after each selector that you group."]
 }, {
