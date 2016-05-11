@@ -1,6 +1,6 @@
 staticTest($._("Group the selectors"), function() {
     var result = null;
-    var descrip = $._("This is a webpage about animal group names, with a few headings and images as examples. There are 2 CSS rules already used to style the `<*h1*>`'s - change those selectors so they also select the `<*h2*>`'s and apply the same properties.");
+    var descrip = $._("This is a webpage about animal group names, with a few headings and images as examples.\n\n There are already 2 CSS rules to style the `<h1>`s - one with a pseudo selector, and one without. Add another selector to each of the rules, so that they also style `<h2>`s.");
     
     var displayP = "_, _ {\n  ...\n}\n\n_, _ {\n  ...\n}"
 
